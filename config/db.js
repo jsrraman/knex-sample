@@ -3,7 +3,8 @@ var db = {
 		client: 'sqlite3',
 		connection: {
 			filename: './knex_sample.sqlite'
-		}
+		},
+		debug: true // output sql statements
 	},
 	postgres: {
 		client: 'pg',
@@ -12,7 +13,8 @@ var db = {
 			user: 'rajaraman',
 			database: 'knex_sample',
 			password: 'p'
-		}
+		},
+		debug: true // output sql statements
 	}
 };
 
