@@ -1,4 +1,4 @@
-var config = {
+var db = {
 	sqlite: {
 		client: 'sqlite3',
 		connection: {
@@ -16,4 +16,4 @@ var config = {
 	}
 };
 
-module.exports = config
+module.exports = db
