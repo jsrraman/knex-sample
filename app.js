@@ -5,13 +5,11 @@ var screen = require('./src/util/screen')
 
 screen.clear()
 
-knex.select('title', 'rating').from('book').asCallback(function(err, data) {
-	if (err) {
-		console.error(err);
-	} else {
-		screen.write(data, 'json');
-	}
-});
-
+knex.select('title', 'rating').from('book').then(function(data) {
+	screen.write(data, 'json');
+}).catch(function(error) {
+	screen.write(error)
+}).finally(function(error) {
 // Destroy the connection pool
-knex.destroy();
+	knex.destroy();
+});
