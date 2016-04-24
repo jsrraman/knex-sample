@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Rajaraman Subramanian",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "knex": "^0.10.0",
+    "pg": "^4.5.3",
+    "sqlite3": "^3.1.3"
+  }
 }
